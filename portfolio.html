@@ -8,66 +8,94 @@
   <link href="portfolio.css" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
     <h1>K Chetan Varun</h1>
     <p>A tech enthusiast</p>
   </header>
-  <section class="img">
-    <img src="./myimg.jpg" alt="myimg" width="700">
-  </section>
-  <section class="section">
+
+  <section class="image-info-container">
+  <div class="image-wrapper">
+    <img src="./myimg.jpg" alt="My Image">
+  </div>
+  <div class="info-card">
+    <h2>Hi, I'm Chetan!</h2>
+    <p>I love blending creativity with code.<br>
+       From AI to UI – I build futuristic tech with a purpose.</p>
+  </div>
+</section>
+
+  <section class="section" id="about">
     <div class="card">
       <h2>About Me</h2>
       <p>I’m passionate about building tech that blends logic and design. Whether it's AI, full-stack development, or design systems — I love making beautiful and functional software.</p>
     </div>
+  </section>
 
+
+  <section class="section" id="education">
+    <div class="card">
+      <h2>Education</h2>
+      <p><strong>Camford English High School</strong><br/>Completed school education with strong academic foundation and communication skills.</p>
+      <p><strong>Pre-University Course – RGUKT RK Valley</strong><br/>Studied core subjects with focus on Mathematics, Physics, Chemistry, and early exposure to programming.</p>
+      <p><strong>B.Tech in Computer Science and Engineering – RGUKT RK Valley</strong><br/>Current undergraduate focused on systems, AI, full-stack development, and software engineering principles.</p>
+    </div>
+  </section>
+
+  <section class="section" id="achievements">
     <div class="card">
       <h2>Achievements</h2>
-      <p>
-        <strong>AIR 844 in Gate CS 2025</strong><br/>
-        This showcases my subject knowledge on CS core subjects and Engineering Mathematics.
-      </p>
-      <p>
-        <strong>ranking 779 in Leetcode Weekly Contest 448</strong><br/>
-        This shocases my dsa skills in Global competition.
-      </p>
+      <p><strong>AIR 844 in GATE CS 2025</strong><br/>Demonstrates deep understanding of CS fundamentals and problem-solving abilities.</p>
+      <p><strong>Rank 779 in Leetcode Weekly Contest 448</strong><br/>Highlights competitive DSA skills and global performance in algorithmic challenges.</p>
     </div>
+  </section>
 
+  <section class="section" id="skills">
     <div class="card">
       <h2>Skills</h2>
-      <p> • Python <br/>
-          • Flutter <br/>
-          • Firebase <br/>
-          • Angular.js <br/>
-          • FastApi <br/>
-          • MongoDB <br/>
-          • Java (basic) <br/>
-          • C++ <br/>
-          • React.js <br/>
-          • Node.js <br/>
-          • Express.js <br/>
-          • HTML/CSS <br/>
-          • SQL <br/>
-          • Git <br/>
-          • AI/ML (basic)</p>
+      <p>
+        • Python <br/>
+        • Flutter <br/>
+        • Firebase <br/>
+        • Angular.js <br/>
+        • FastAPI <br/>
+        • MongoDB <br/>
+        • Java (basic) <br/>
+        • C++ <br/>
+        • React.js <br/>
+        • Node.js <br/>
+        • Express.js <br/>
+        • HTML/CSS <br/>
+        • SQL <br/>
+        • Git <br/>
+        • AI/ML (basic)
+      </p>
     </div>
+  </section>
 
+  <section class="section" id="projects">
     <div class="card">
       <h2>Projects</h2>
-      <p>
-        <strong>Face-Based Mess Management</strong><br/>
-        A smart system that uses facial recognition to track mess entries and compute payments dynamically.
-      </p>
-      <p>
-        <strong>Face-Based Mess Management</strong><br/>
-        A smart system that uses facial recognition to track mess entries and compute payments dynamically.
-      </p>
+      <p><strong>Face-Based Mess Management</strong><br/>A smart system that uses facial recognition to track mess entries and compute payments dynamically.</p>
     </div>
+  </section>
 
+  <section class="section" id="contact">
     <div class="card">
       <h2>Contact</h2>
       <p>
-        Email: <a href="chetanvarun121@gmail.com">chetanvarun121@gmail.com</a><br />
+        Email: <a href="mailto:chetanvarun121@gmail.com">chetanvarun121@gmail.com</a><br />
         LinkedIn: <a href="https://www.linkedin.com/in/k-chetan-varun-aaa5aa280/">K Chetan Varun</a><br />
         GitHub: <a href="https://github.com/ChetanVarunKanipakam" target="_blank">@ChetanVarunKanipakam</a>
       </p>
@@ -75,7 +103,26 @@
   </section>
 
   <footer>
-    &copy; K.Chetan Varun . All rights reserved.
+    &copy; K Chetan Varun. All rights reserved.
   </footer>
+  <div class="cursor-dot"></div>
+<div class="cursor-tail"></div>
+
+<script>
+  const cursorDot = document.querySelector('.cursor-dot');
+  const cursorTail = document.querySelector('.cursor-tail');
+
+  document.addEventListener('mousemove', e => {
+    const { clientX: x, clientY: y } = e;
+    cursorDot.style.left = `${x}px`;
+    cursorDot.style.top = `${y}px`;
+    
+    setTimeout(() => {
+      cursorTail.style.left = `${x}px`;
+      cursorTail.style.top = `${y}px`;
+    }, 40); // adjust delay for smoothness
+  });
+</script>
+
 </body>
 </html>
